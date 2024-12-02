@@ -16,6 +16,11 @@
   background-size: cover;
 }
 
+.download {
+  background: url(../images/download-background.jpg) center center no-repeat;
+  background-size: cover;
+}
+
 .modal-dialog {
   max-width: 1040px;
 }
