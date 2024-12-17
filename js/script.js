@@ -21,14 +21,14 @@ document.addEventListener('DOMContentLoaded', runTypingEffect);
 //  main.js
  
 // POST request using fetch()
-fetch("http://ooustaffrequest.us-east-2.elasticbeanstalk.com/oouweb/staffs/login", {
+fetch("http://localhost:9090/oouweb/staffs/login", {
     
     // Adding method type
     method: "POST",
     
     // Adding body or contents to send
     body: JSON.stringify({
-        email: "chris@chris1.com",
+        email: "chris@chris.com",
         password: "christopher"
     }),
     
@@ -41,8 +41,9 @@ fetch("http://ooustaffrequest.us-east-2.elasticbeanstalk.com/oouweb/staffs/login
 // Converting to JSON
 .then(response => {
 
-    console.log('headers: ' + response.headers);
+    console.log('headers Auth: ' + response.headers.get('Authorization'));
     console.log('status: ' + response.status);
+    console.log('Headers: ' + response.headers.values())
 
     response.json()
 })
